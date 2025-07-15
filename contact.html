@@ -40,14 +40,22 @@
       <div class="contact-grid">
         <!-- Contact Form -->
         <form id="contact-form" action="https://formspree.io/f/xkgzwabz" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="_replyto" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" placeholder="Your Email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
           <button type="submit">Send Message</button>
+
           <p id="form-success" style="display: none; color: green; font-weight: bold; margin-top: 1rem;">
-           Your message has been sent. We'll be in touch soon!
+            Your message has been sent. We'll be in touch soon!
           </p>
         </form>
+
 
 
         <!-- Contact Info -->
@@ -68,6 +76,7 @@
   <div class="footer-content">
     <p>&copy; 2025 A-j Pools. All rights reserved.</p>
     <p>Commercial Pool Specialists | Cape Town</p>
+    <p>Built by <a href="https://dateh7.github.io/DatehPortfolio/" target="_blank" class="glow-link">Dateh</a></p>
   </div>
 </footer>
 
@@ -79,7 +88,7 @@
 
 
 <!-- JavaScript -->
-<script src="app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
 

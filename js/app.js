@@ -30,8 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Something went wrong. Please try again.');
       }
     }).catch(error => {
+      console.error('There was a problem sending your message:', error);
       alert('There was a problem sending your message.');
     });
+
   });
 
   // Hamburger toggle (keep this too)

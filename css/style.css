@@ -566,6 +566,19 @@ footer p {
   margin: 0.3rem 0;
 }
 
+.glow-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #0077b6, 0 0 15px #0077b6;
+  transition: text-shadow 0.3s ease;
+}
+
+.glow-link:hover {
+  text-shadow: 0 0 8px #ffffff, 0 0 16px #00b4d8, 0 0 24px #00b4d8;
+}
+
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero-text h1 {
