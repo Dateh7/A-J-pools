@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Expert pool restoration services in Cape Town for hotels, guesthouses, and residential pools. A-j Pools is trusted by Glen Boutique Hotel and more." />
+  <meta name="keywords" content="pool restoration Cape Town, pool relining, pool repair, fibreglass pools, Glen Boutique Hotel, guesthouse pool repair" />
+  <meta name="author" content="A-j Pools" />
+  <title>Commercial Pool Repairs | A-j Pools Cape Town</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+
+<body>
+<!-- Header -->
+<header>
+  <div class="container">
+    <img src="img/logo.png" alt="A-j Pools Logo" class="logo" />
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      &#9776;
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Pool Restorations in Cape Town</h1>
+    <p>We specialize in refibre lining, fibreglass pool restoration, and leak repairs for commercial and personal pools</p>
+    <a href="contact.html" class="btn">Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- Services Preview -->
+<section class="section" id="services-preview">
+  <h2>Our Core Services</h2>
+  <div class="service-cards">
+    <div class="card">
+      <img src="img/fibreglass-pool.jpg" alt="Fibreglass Resurfacing" />
+      <h3>Refibrelining</h3>
+      <p>Professional resurfacing for long-lasting durability and aesthetic appeal.</p>
+    </div>
+    <div class="card">
+      <img src="img/cracks-and-leaks.jpg" alt="Leak Repair" />
+      <h3>Crack & Leak Repairs</h3>
+      <p>Permanent solutions for leaks and cracks in commercial pools.</p>
+    </div>
+    <div class="card">
+      <img src="img/laminated-pool.jpg" alt="Laminating" />
+      <h3>Laminating</h3>
+      <p>Enhance protection and finish with high-grade commercial laminating.</p>
+    </div>
+  </div>
+  <a href="services.html" class="btn" style="margin-top: 2rem;">Explore All Services</a>
+</section>
+
+<!-- About Preview -->
+<section class="section light-bg" id="about-preview">
+  <h2>Why Choose A-j Pools?</h2>
+  <div class="container">
+    <p>A-j Pools is a Cape Town-based company that has served commercial and private clients for nearly a decade. Our team specializes in long-lasting pool repair solutions with professional craftsmanship and fast turnaround times.</p>
+    <a href="about.html" class="btn" style="margin-top: 1.5rem;">Learn More About Us</a>
+  </div>
+</section>
+
+<!-- Gallery Preview -->
+<section class="section light-bg" id="homepage-gallery">
+  <div class="container">
+    <h2>Recent Work</h2>
+    <p class="gallery-intro-text">Before and after shots from one of our recent pool transformations.</p>
+
+    <div class="before-after-gallery">
+      <div class="gallery-pair">
+        <div class="gallery-item before">
+          <img src="img/e1.jpg" alt="Before pool renovation 1" />
+        </div>
+        <div class="gallery-item after">
+          <img src="img/e2.jpg" alt="After pool renovation 1" />
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="gallery.html" class="btn">View Full Gallery</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Preview Section -->
+<section class="section light-bg" id="faq-preview">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">What services do you offer?</button>
+      <div class="faq-answer">
+        <p>We provide fibreglass resurfacing, refibre lining, leak repair, and full pool restoration services for both residential and commercial clients.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you work with hotels and guesthouses?</button>
+      <div class="faq-answer">
+        <p>Yes! We’ve completed high-quality restorations for establishments like the Glen Boutique Hotel and various luxury guesthouses in Cape Town.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How long does a typical project take?</button>
+      <div class="faq-answer">
+        <p>Most restorations take between 3 to 5 days, depending on the size and condition of the pool.</p>
+      </div>
+    </div>
+
+    <a href="faq.html" class="btn" style="margin-top: 2rem;">See Full FAQ</a>
+  </div>
+</section>
+
+
+<!-- Contact Preview -->
+<section class="section contact light-bg" id="contact-preview">
+  <h2>Contact Us</h2>
+  <p>Have a pool that needs attention? Let’s talk.</p>
+  <a href="contact.html" class="btn">Contact A-j Pools</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 A-j Pools. All rights reserved.</p>
+    <p>Pool Restoration Specialists | Cape Town</p>
+    <p>Follow us: Facebook | TikTok</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach((question) => {
+      question.addEventListener("click", () => {
+        question.classList.toggle("active");
+        const answer = question.nextElementSibling;
+
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+        } else {
+          // Close all other answers
+          document.querySelectorAll(".faq-answer").forEach((a) => {
+            a.style.maxHeight = null;
+          });
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
