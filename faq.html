@@ -97,27 +97,6 @@
 </a>
 
 <script src="js/app.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const questions = document.querySelectorAll(".faq-question");
 
-    questions.forEach((question) => {
-      question.addEventListener("click", () => {
-        question.classList.toggle("active");
-        const answer = question.nextElementSibling;
-
-        if (answer.style.maxHeight) {
-          answer.style.maxHeight = null;
-        } else {
-          // Close all other answers
-          document.querySelectorAll(".faq-answer").forEach((a) => {
-            a.style.maxHeight = null;
-          });
-          answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-      });
-    });
-  });
-</script>
 </body>
 </html>

@@ -34,9 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
       btn.classList.toggle('active');
-      const ans = btn.nextElementSibling;
-      ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
     });
   });
+
 });
