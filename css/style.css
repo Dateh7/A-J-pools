@@ -119,6 +119,13 @@ nav a:focus-visible {
   color: var(--color-primary);
 }
 
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--color-primary);
+}
+
 nav a:hover::after,
 nav a:focus-visible::after {
   transform: scaleX(1);
@@ -451,6 +458,52 @@ nav a:focus-visible::after {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.contact-preview {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.contact-preview .section-lead {
+  margin-bottom: 0;
+}
+
+.contact-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 2.75rem);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+  max-width: 640px;
+}
+
+.contact-highlights {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.contact-highlights li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-accent), var(--color-primary));
+}
+
 /* ===== About Section ===== */
 .about-grid {
   display: flex;
@@ -588,10 +641,9 @@ nav a:focus-visible::after {
 
 .service-cards {
   display: grid;
-  gap: clamp(1.5rem, 3vw, 2.25rem);
+  gap: 2rem;
   padding-top: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .card {
@@ -749,6 +801,7 @@ nav a:focus-visible::after {
 }
 
 .faq-item {
+  margin-bottom: 1.25rem;
   border-radius: var(--radius-md);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
@@ -842,6 +895,10 @@ nav a:focus-visible::after {
 .before-after-gallery {
   display: grid;
   gap: clamp(1.25rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2.25rem;
 }
 
 .gallery-pair {
@@ -854,10 +911,13 @@ nav a:focus-visible::after {
     var(--color-surface);
   border: 1px solid rgba(0, 100, 148, 0.08);
   box-shadow: var(--shadow-sm);
+  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .gallery-item {
   position: relative;
+  text-align: center;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -891,6 +951,30 @@ nav a:focus-visible::after {
 
 .gallery-item:hover img {
   transform: scale(1.04);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.gallery-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-intro h2 {
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color: var(--color-primary);
+}
+
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .gallery-grid {
@@ -1034,6 +1118,16 @@ body.mobile-nav-open {
     margin: 0;
   }
 
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
   .nav-links a {
     font-size: 1.1rem;
     display: block;
@@ -1042,6 +1136,7 @@ body.mobile-nav-open {
   header .container {
     gap: 1rem;
   }
+}
 
   .section-layout,
   .contact-showcase,
@@ -1055,8 +1150,14 @@ body.mobile-nav-open {
 
   .contact-card {
     max-width: 100%;
+@media (max-width: 600px) {
+  .hero-text {
+    padding: 2rem 1.5rem;
   }
-}
+
+  .hero-text h1 {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+  }
 
 @media (max-width: 600px) {
   .hero-text {
@@ -1081,6 +1182,8 @@ body.mobile-nav-open {
 
   .section-eyebrow::before {
     width: 22px;
+  .hero-text p {
+    font-size: 1.05rem;
   }
 }
 
