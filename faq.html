@@ -7,8 +7,13 @@
   <meta name="keywords" content="pool restoration FAQ, fibreglass resurfacing, refibre lining questions, pool repair Cape Town" />
   <meta name="author" content="A-j Pools" />
   <title>FAQ | A-j Pools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,7 +21,7 @@
   <div class="container">
     <img src="img/logo.png" alt="A-j Pools Logo" class="logo" />
     <nav>
-      <ul id="nav-links">
+      <ul id="nav-links" class="nav-links" aria-hidden="true">
         <li><a href="index.html">Home</a></li>
         <li><a href="service.html">Services</a></li>
         <li><a href="about.html">About</a></li>
@@ -25,71 +30,87 @@
         <li><a href="faq.html" class="active">FAQ</a></li>
       </ul>
     </nav>
-    <div class="hamburger" id="hamburger">&#9776;</div>
+    <button type="button" class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
   </div>
 </header>
 
-<section class="section light-bg" id="faq-page">
-  <div class="container">
-    <h2>Frequently Asked Questions</h2>
+<div class="nav-overlay" id="nav-overlay"></div>
 
-    <div class="faq-item">
-      <button class="faq-question">What services do you offer?</button>
-      <div class="faq-answer">
-        <p>We specialize in fibreglass resurfacing, crack and leak repairs, full pool restoration, and refibre lining for all pool types.</p>
+<main>
+  <section class="section light-bg" id="faq-page">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What services do you offer?</button>
+        <div class="faq-answer">
+          <p>We specialize in fibreglass resurfacing, crack and leak repairs, full pool restoration, and refibre lining for all pool types.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button class="faq-question">Do you work with commercial clients?</button>
-      <div class="faq-answer">
-        <p>Yes! We've restored pools for commercial properties including guesthouses and the prestigious <a href="https://glenhotel.co.za/" target="_blank" style="color: #0077b6; text-decoration: underline;">Glen Boutique Hotel</a>.</p>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Do you work with commercial clients?</button>
+        <div class="faq-answer">
+          <p>Yes! We've restored pools for commercial properties including guesthouses and the prestigious <a href="https://glenhotel.co.za/" target="_blank" class="highlight-link">Glen Boutique Hotel</a>.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button class="faq-question">How long does a pool restoration take?</button>
-      <div class="faq-answer">
-        <p>On average, restorations are completed in 3–5 working days. More complex jobs may take longer.</p>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">How long does a pool restoration take?</button>
+        <div class="faq-answer">
+          <p>On average, restorations are completed in 3–5 working days. More complex jobs may take longer.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button class="faq-question">How much does it cost?</button>
-      <div class="faq-answer">
-        <p>Pricing varies depending on the size and condition of your pool. Contact us for a free quote.</p>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">How much does it cost?</button>
+        <div class="faq-answer">
+          <p>Pricing varies depending on the size and condition of your pool. Contact us for a free quote.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button class="faq-question">Can you fix severe leaks?</button>
-      <div class="faq-answer">
-        <p>Absolutely. Our team is trained in identifying and sealing cracks and leak points using industry-standard methods.</p>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can you fix severe leaks?</button>
+        <div class="faq-answer">
+          <p>Absolutely. Our team is trained in identifying and sealing cracks and leak points using industry-standard methods.</p>
+        </div>
       </div>
-    </div>
 
 
-    <div class="faq-item">
-      <button class="faq-question">What is refibre lining?</button>
-      <div class="faq-answer">
-        <p>Refibre lining is the process of applying a new fibreglass layer over an existing pool structure to improve durability and appearance.</p>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">What is refibre lining?</button>
+        <div class="faq-answer">
+          <p>Refibre lining is the process of applying a new fibreglass layer over an existing pool structure to improve durability and appearance.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="faq-item">
-      <button class="faq-question">Can you convert a gunite pool to fibreglass?</button>
-      <div class="faq-answer">
-        <p>Yes! We specialize in converting gunite and concrete pools into smooth, easy-maintenance fibreglass finishes.</p>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Can you convert a gunite pool to fibreglass?</button>
+        <div class="faq-answer">
+          <p>Yes! We specialize in converting gunite and concrete pools into smooth, easy-maintenance fibreglass finishes.</p>
+        </div>
       </div>
-    </div>
 
-  </div>
-</section>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>&copy; 2025 A-j Pools. All rights reserved.</p>
-  <p>Commercial & Residential Pool Restoration | Cape Town</p>
-  <p>Built by <a href="https://dateh7.github.io/DatehPortfolio/" target="_blank" class="glow-link">Dateh</a></p>
+  <div class="footer-content">
+    <p>&copy; 2025 A-j Pools. All rights reserved.</p>
+    <p>Commercial &amp; Residential Pool Restoration | Cape Town</p>
+    <p>Follow our social media:</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/aj_pools2014?igsh=OWRrNDFoa2VtcjFo" target="_blank">
+        <img src="img/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@aj_pools2010?_t=ZM-8y33ubUHftA&_r=1" target="_blank">
+        <img src="img/tiktok.png" alt="TikTok" />
+      </a>
+    </div>
+    <div class="footer-divider"></div>
+    <p>Built by <a href="https://dateh7.github.io/DatehPortfolio/" target="_blank" class="glow-link">Dateh</a></p>
+  </div>
 </footer>
 
 <a href="https://wa.me/27845327404" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
