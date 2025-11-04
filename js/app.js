@@ -88,3 +88,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ===== Mobile Nav Toggle =====
+const hamburger = document.getElementById('hamburger');
+const nav = document.querySelector('header nav');
+
+if (hamburger && nav) {
+  hamburger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(open));
+  });
+
+  // close on link click (mobile)
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('open'));
+  });
+}
+
+// ===== Sticky Header Shadow on Scroll =====
+const header = document.querySelector('header');
+const toggleHeaderShadow = () => {
+  if (!header) return;
+  if (window.scrollY > 10) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+};
+toggleHeaderShadow();
+window.addEventListener('scroll', toggleHeaderShadow);
+
+// ===== Reveal on Scroll (Animations) =====
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.16 });
+
+document.querySelectorAll('.section, .card.minimal, .before-after-grid > div, .faq-list details, .contact .btn')
+  .forEach(el => { el.classList.add('reveal'); io.observe(el); });
+
