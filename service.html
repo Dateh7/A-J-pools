@@ -3,126 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Expert pool restoration services in Cape Town for hotels, guesthouses, and residential pools. A-j Pools is trusted by Glen Boutique Hotel and more." />
-  <meta name="keywords" content="pool restoration Cape Town, pool relining, pool repair, fibreglass pools, Glen Boutique Hotel, guesthouse pool repair" />
-  <meta name="author" content="A-j Pools" />
-  <title>Pool Restoration Services | A-j Pools Cape Town</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="img/logo.png" type="image/png">
-</head>
-<body>
+  <meta name="description" content="A-J Pools provides professional fibreglass pool restoration, relining, leak repair, and structural reinforcement services for homes, hotels, and guesthouses across Cape Town." />
+  <meta name="keywords" content="pool restoration Cape Town, fibreglass relining, pool repair, leak repair, structural pool repair, pool laminating, surface finishing, pool refurbishment Cape Town, A-J Pools, hotel pool restoration" />
+  <meta name="author" content="A-J Pools" />
+  <title>Pool Restoration Services | A-J Pools Cape Town</title>
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <img src="img/logo.png" alt="A-j Pools Logo" class="logo" />
-    <nav>
-      <ul id="nav-links" class="nav-links" aria-hidden="true">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="service.html" class="active">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html" >FAQ</a></li>
-      </ul>
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0B1E33',
+            aqua: '#18A4B8',
+            silver: '#E5E7EB',
+            darksilver: '#9CA3AF',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    .theme-fade { transition: filter 0.5s ease; }
+    .fade-enter { filter: brightness(0.7); }
+    .icon { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; }
+    @keyframes icon-rotate {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.15); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+    .animate-icon { animation: icon-rotate 0.6s ease-in-out; }
+  </style>
+</head>
+
+<body class="font-body bg-white text-navy dark:bg-navy dark:text-silver theme-fade">
+
+<!-- HEADER -->
+<header class="fixed w-full bg-navy/90 dark:bg-[#081426]/90 backdrop-blur-sm z-50 text-white">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="img/logo.png" alt="A-J Pools Logo" class="w-10 h-10 rounded" />
+      <span class="font-sans font-semibold text-xl tracking-wide">A-J Pools</span>
+    </a>
+
+    <div class="flex items-center space-x-4">
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="hover:text-aqua">Home</a>
+        <a href="service.html" class="text-aqua font-semibold">Services</a>
+        <a href="about.html" class="hover:text-aqua">About</a>
+        <a href="gallery.html" class="hover:text-aqua">Gallery</a>
+        <a href="contact.html" class="hover:text-aqua">Contact</a>
+        <a href="faq.html" class="hover:text-aqua">FAQ</a>
+      </nav>
+
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" aria-label="Toggle Dark Mode" class="focus:outline-none">
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="icon hidden" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
+
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">&#9776;</button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden bg-navy dark:bg-[#0a1527] border-t border-silver/20 md:hidden">
+    <nav class="flex flex-col space-y-4 p-4 text-lg">
+      <a href="index.html">Home</a>
+      <a href="service.html" class="text-aqua">Services</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
     </nav>
-    <button type="button" class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
   </div>
 </header>
 
-<div class="nav-overlay" id="nav-overlay"></div>
+<!-- HERO -->
+<section class="relative pt-40 pb-28 text-center text-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('img/hero-pool-blue.jpeg')] bg-cover bg-center brightness-75"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/80 to-navy/95"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6" data-aos="fade-up">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Pool Restoration Services</h1>
+    <p class="text-lg md:text-xl text-silver mb-8">From fibreglass relining to leak repairs we provide permanent commercial-grade restoration trusted across Cape Town.</p>
+    <a href="contact.html" class="bg-aqua hover:bg-teal-500 text-white font-semibold px-8 py-4 rounded-full transition-transform hover:scale-105 shadow-lg">Get a Free Quote</a>
+  </div>
+</section>
 
-<!-- Services Section -->
-<main>
-  <section class="section" id="services">
-    <div class="container">
-      <h2 align="center">Pool Restoration Services</h2>
-      <p class="section-lead">We restore and relife pools for <strong>residential homes</strong>, <strong>guesthouses</strong>, and <strong>commercial properties</strong> across Cape Town and surrounding areas.</p>
+<!-- SERVICES GRID -->
+<section class="py-20 bg-silver/30 dark:bg-[#0c1728]" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 dark:text-aqua">Our Core Services</h2>
+    <p class="max-w-3xl mx-auto text-darksilver text-lg mb-12">We restore reinforce and refinish pools for residential homes guesthouses and commercial properties using precision craftsmanship and premium materials.</p>
 
-      <div class="service-cards spacer-top-lg">
-
-        <div class="card service-hover">
-          <img src="img/service/service1.jpg" alt="Fibreglass Relining">
-          <h3>Fibreglass Relining</h3>
-          <p>Seal and transform old surfaces into smooth, watertight shells that are stronger and last longer.</p>
-        </div>
-
-        <div class="card service-hover">
-          <img src="img/service/service2.jpg" alt="Leak Repairs">
-          <h3>Crack &amp; Leak Repairs</h3>
-          <p>We locate, repair, and reinforce damaged sections to ensure no future leakage or crumbling.</p>
-        </div>
-
-        <div class="card service-hover">
-          <img src="img/service/service3.jpg" alt="Pool Laminating">
-          <h3>Pool Laminating</h3>
-          <p>Strengthen and re-layer pools with fibreglass sheets to give them new life and long-term durability.</p>
-        </div>
-
-        <div class="card service-hover">
-          <img src="img/service/service4.jpg" alt="Structural Repair">
-          <h3>Structural Reinforcement</h3>
-          <p>From sagging shells to deep cracks, we fix and reinforce pool structures from the inside out.</p>
-        </div>
-
-        <div class="card service-hover">
-          <img src="img/service/service6.jpg" alt="Surface Finishing">
-          <h3>Surface Finishing</h3>
-          <p>We deliver clean, smooth finishes in a range of shades, built to resist wear, UV rays, and algae.</p>
-        </div>
-
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-[#0f1e33]/70 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in">
+        <img src="img/service/service1.jpg" alt="Fibreglass Relining" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Fibreglass Relining</h3>
+        <p class="text-darksilver text-sm">Seal and transform old surfaces into smooth watertight shells that last for years.</p>
       </div>
 
-      <div class="text-center spacer-top-lg">
-        <a href="contact.html" class="btn">Request a Free Quote</a>
+      <div class="bg-white dark:bg-[#0f1e33]/70 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/service/service2.jpg" alt="Leak Repairs" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Crack and Leak Repairs</h3>
+        <p class="text-darksilver text-sm">We locate repair and reinforce cracks and leaks with guaranteed structural integrity.</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#0f1e33]/70 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/service/service3.jpg" alt="Pool Laminating" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Pool Laminating</h3>
+        <p class="text-darksilver text-sm">We re-layer and strengthen pools with premium fibreglass laminates for a flawless finish.</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#0f1e33]/70 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/service/service4.jpg" alt="Structural Repair" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Structural Reinforcement</h3>
+        <p class="text-darksilver text-sm">From sagging shells to deep cracks we repair and reinforce pools from the inside out.</p>
+      </div>
+
+      <div class="bg-white dark:bg-[#0f1e33]/70 backdrop-blur-md rounded-2xl shadow-lg p-6 hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/service/service6.jpg" alt="Surface Finishing" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Surface Finishing</h3>
+        <p class="text-darksilver text-sm">Choose from clean durable finishes that resist UV stains and algae growth built to last.</p>
       </div>
     </div>
-  </section>
 
-  <section class="section dark-bg">
-    <div class="container">
-      <h2>Trusted by the Best</h2>
-      <p class="trust-intro">
-        Our work has been trusted by both homeowners and premium establishments — including the 5-star
-        <a href="https://www.glenhotel.co.za/" target="_blank" class="highlight-link">Glen Boutique Hotel in Cape Town</a>.
-      </p>
-      <div class="logo-showcase">
-        <img src="img/glen-logo.png" alt="Glen Boutique Hotel Logo" />
-      </div>
+    <div class="mt-12">
+      <a href="contact.html" class="bg-navy dark:bg-aqua text-white dark:text-navy px-8 py-3 rounded-full font-semibold hover:scale-105 transition">Request a Free Quote</a>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2025 A-j Pools. All rights reserved.</p>
-    <p>Pool Restoration Experts | Cape Town</p>
-    <p>Follow our social media:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/aj_pools2014?igsh=OWRrNDFoa2VtcjFo" target="_blank">
-        <img src="img/instagram.png" alt="Instagram" />
-      </a>
-      <a href="https://www.tiktok.com/@aj_pools2010?_t=ZM-8y33ubUHftA&_r=1" target="_blank">
-        <img src="img/tiktok.png" alt="TikTok" />
-      </a>
+<!-- TRUSTED SECTION -->
+<section class="py-20 bg-navy text-white dark:bg-[#050c16]" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-4xl font-sans font-bold mb-4">Trusted by the Best</h2>
+    <p class="max-w-2xl mx-auto text-silver mb-10">Our expertise has been trusted by homeowners and premium establishments including the 5-star <a href="https://www.glenhotel.co.za/" target="_blank" class="text-aqua hover:underline">Glen Boutique Hotel in Cape Town</a>.</p>
+    <img src="img/glen-logo.png" alt="Glen Boutique Hotel Logo" class="mx-auto h-20 opacity-90 hover:opacity-100 transition">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy dark:bg-[#050c16] text-silver py-10 text-center">
+  <div class="max-w-6xl mx-auto space-y-4">
+    <p>&copy; 2025 A-J Pools. All rights reserved.</p>
+    <div class="flex justify-center space-x-4">
+      <a href="https://www.instagram.com/aj_pools2014" target="_blank"><img src="img/instagram.png" alt="Instagram" class="w-6 h-6 opacity-80 hover:opacity-100 transition"></a>
+      <a href="https://www.tiktok.com/@aj.pools" target="_blank"><img src="img/tiktok.png" alt="TikTok" class="w-6 h-6 opacity-80 hover:opacity-100 transition"></a>
     </div>
-    <div class="footer-divider"></div>
-    <p>Built by <a href="https://dateh.dev" target="_blank" class="glow-link">Dateh</a></p>
+    <p class="text-sm">Built by <a href="https://dateh.dev" target="_blank" class="text-aqua hover:underline">Dateh</a></p>
   </div>
 </footer>
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/27845327404" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-  <img src="img/whatsapp.png" alt="WhatsApp Chat" />
+<a href="https://wa.me/27845327404" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 bg-[#25D366] rounded-full p-3 shadow-lg hover:scale-110 transition">
+  <img src="img/whatsapp.png" alt="WhatsApp" class="w-7 h-7" />
 </a>
 
-<script src="js/app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 900, once: true });
+  const themeToggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  const iconSun = document.getElementById('icon-sun');
+  const iconMoon = document.getElementById('icon-moon');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+  if (localStorage.getItem('theme') === 'dark') {
+    root.classList.add('dark');
+    iconSun.classList.add('hidden');
+    iconMoon.classList.remove('hidden');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.add('fade-enter');
+    setTimeout(() => document.body.classList.remove('fade-enter'), 200);
+    root.classList.toggle('dark');
+    const isDark = root.classList.contains('dark');
+    iconSun.classList.toggle('hidden', isDark);
+    iconMoon.classList.toggle('hidden', !isDark);
+    const activeIcon = isDark ? iconMoon : iconSun;
+    activeIcon.classList.add('animate-icon');
+    setTimeout(() => activeIcon.classList.remove('animate-icon'), 600);
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+</script>
 </body>
 </html>

@@ -3,250 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Expert pool restoration services in Cape Town for hotels, guesthouses, and residential pools. A-j Pools is trusted by Glen Boutique Hotel and more." />
-  <meta name="keywords" content="pool restoration Cape Town, pool relining, pool repair, fibreglass pools, Glen Boutique Hotel, guesthouse pool repair" />
-  <meta name="author" content="A-j Pools" />
-  <title>Commercial Pool Repairs | A-j Pools Cape Town</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="img/logo.png" type="image/png">
-</head>
-<body>
+  <meta name="description" content="A-J Pools is Cape Town’s leading specialist in fibreglass pool restoration, resurfacing, relining and leak repair for hotels, guesthouses, and premium residential pools." />
+  <meta name="keywords" content="pool restoration Cape Town, fibreglass pool repair, pool relining experts, commercial pool refurbishment, fibreglass resurfacing, leak and crack repair, luxury pool renovation, pool refurbishment Cape Town, A-J Pools, hotel pool restoration" />
+  <meta name="author" content="A-J Pools" />
+  <title>Fibreglass Pool Restoration Cape Town | A-J Pools</title>
 
-<!-- Header -->
-<header>
-  <div class="container">
-    <img src="img/logo.png" alt="A-j Pools Logo" class="logo" />
-    <nav>
-      <ul id="nav-links" class="nav-links" aria-hidden="true">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="service.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0B1E33',
+            aqua: '#18A4B8',
+            silver: '#E5E7EB',
+            darksilver: '#9CA3AF',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    * { transition: background-color 0.4s ease, color 0.4s ease; }
+    .theme-fade { transition: filter 0.5s ease, background-color 0.4s ease, color 0.4s ease; }
+    .fade-enter { filter: brightness(0.7); }
+    .icon { width: 22px; height: 22px; stroke-width: 2; stroke: currentColor; fill: none; }
+
+    /* Mobile dropdown animation */
+    @keyframes slideDown {
+      0% { opacity: 0; transform: translateY(-10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .animate-slide { animation: slideDown 0.3s ease forwards; }
+  </style>
+</head>
+
+<body class="font-body text-navy bg-white dark:bg-navy dark:text-silver theme-fade">
+
+<!-- 🔹 HEADER -->
+<header class="fixed w-full bg-navy/90 dark:bg-[#081426]/90 backdrop-blur-sm z-[9999] text-white shadow-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4 relative">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2 z-[2]">
+      <img src="img/logo.png" alt="A-J Pools Logo" class="w-10 h-10 rounded" />
+      <span class="font-sans font-semibold text-xl tracking-wide">A-J Pools</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html" class="hover:text-aqua transition">Home</a>
+      <a href="service.html" class="hover:text-aqua transition">Services</a>
+      <a href="about.html" class="hover:text-aqua transition">About</a>
+      <a href="gallery.html" class="hover:text-aqua transition">Gallery</a>
+      <a href="contact.html" class="hover:text-aqua transition">Contact</a>
+      <a href="faq.html" class="hover:text-aqua transition">FAQ</a>
     </nav>
-    <button type="button" class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">&#9776;</button>
+
+    <!-- Controls -->
+    <div class="flex items-center space-x-4 absolute right-6 top-1/2 -translate-y-1/2 md:static md:translate-y-0 z-[3]">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" aria-label="Toggle Dark Mode" class="focus:outline-none">
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" class="icon hidden" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">&#9776;</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden bg-navy dark:bg-[#0a1527] border-t border-silver/20 md:hidden">
+    <nav class="flex flex-col space-y-4 p-4 text-lg">
+      <a href="index.html" class="hover:text-aqua">Home</a>
+      <a href="service.html" class="hover:text-aqua">Services</a>
+      <a href="about.html" class="hover:text-aqua">About</a>
+      <a href="gallery.html" class="hover:text-aqua">Gallery</a>
+      <a href="contact.html" class="hover:text-aqua">Contact</a>
+      <a href="faq.html" class="hover:text-aqua">FAQ</a>
+    </nav>
   </div>
 </header>
-<div class="nav-overlay" id="nav-overlay"></div>
 
-<!-- Hero -->
-<main>
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Pool Restorations in Cape Town</h1>
-      <p>We specialize in refibre lining, fibreglass pool restoration, and leak repairs for commercial and personal pools.</p>
-      <a href="contact.html" class="btn">Get a Free Quote</a>
-    </div>
-    <style>
-      /* SECTION SPACING */
-      .section{padding:56px 0;text-align:center}
+<!-- 🔹 HERO -->
+<section class="relative h-screen flex items-center justify-center text-white overflow-hidden transition-colors duration-500">
+  <div class="absolute inset-0 bg-[url('img/hero-pool-blue.jpeg')] bg-cover bg-center brightness-75"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/70 to-navy/90"></div>
 
-      /* CLEAN MODERN SERVICE CARDS */
-      .service-cards{
-        display:flex;
-        flex-wrap:wrap;
-        gap:24px;
-        justify-content:center;
-        margin-top:30px;
-      }
-      .service-card{
-        background:#ffffff;
-        border:1px solid #e5e9f1;
-        border-radius:18px;
-        width:300px;
-        max-width:100%;
-        overflow:hidden;
-        display:flex;
-        flex-direction:column;
-        transition:all .25s ease;
-      }
-      .service-card:hover{
-        transform:translateY(-6px);
-        box-shadow:0 14px 32px rgba(0,0,0,.09);
-        border-color:#cfd8e6;
-      }
-      .service-card img{
-        width:100%;height:200px;object-fit:cover;
-        border-bottom:1px solid #eef0f4;
-      }
-      .service-card-body{
-        padding:20px;text-align:center;
-      }
-      .service-card h3{
-        margin:0 0 8px;font-size:1.15rem;font-weight:600;color:#0f172a;
-      }
-      .service-card p{
-        font-size:.95rem;color:#64748b;margin:0;line-height:1.5;
-      }
+  <div class="relative z-10 text-center px-6 max-w-3xl" data-aos="fade-up">
+    <h1 class="font-sans font-bold text-5xl md:text-6xl mb-6 leading-tight">The Foundation of a Perfect Pool.</h1>
+    <p class="text-lg md:text-xl text-silver mb-8">Cape Town’s trusted experts in <strong>fibreglass pool restoration</strong>, <strong>leak and crack repair</strong>, and <strong>structural relining</strong> for hotels, guesthouses and premium homes.</p>
+    <a href="contact.html" class="bg-aqua hover:bg-teal-500 text-white font-semibold px-8 py-4 rounded-full transition-transform duration-300 hover:scale-105 shadow-lg">Get a Free Quote</a>
+  </div>
+</section>
 
-      /* MOBILE */
-      @media(max-width:600px){
-        .service-card img{height:160px}
-        .service-card{width:100%}
-      }
-    </style>
-  </section>
+<!-- 🔹 ABOUT -->
+<section class="py-20 bg-white dark:bg-[#0d1a2e] dark:text-silver" id="about" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <span class="uppercase tracking-wide text-aqua font-semibold">About A-J Pools</span>
+    <h2 class="text-3xl md:text-4xl font-sans font-bold mt-3 mb-6 dark:text-aqua">Cape Town’s Fibreglass Restoration Specialists</h2>
+    <p class="max-w-3xl mx-auto text-darksilver text-lg">With over a decade of excellence, A-J Pools delivers professional <strong>pool resurfacing</strong>, <strong>fibreglass relining</strong>, and <strong>commercial pool refurbishment</strong> using premium materials and proven techniques. We don’t patch – we restore your pool’s structure permanently.</p>
+    <a href="about.html" class="inline-block mt-8 bg-navy dark:bg-aqua text-white dark:text-navy px-8 py-3 rounded-full font-semibold hover:scale-105 transition">Learn More</a>
+  </div>
+</section>
 
-  <!-- Services -->
-  <section class="section" id="services-preview">
-    <div class="container section-layout">
-      <div class="section-intro">
-        <span class="section-eyebrow">Services</span>
-        <h2>Our Core Services</h2>
-        <p class="section-lead">Reliable craftsmanship, premium materials, and a spotless finish for commercial and residential pools.</p>
-        <a href="service.html" class="btn spacer-top-lg">Explore All Services</a>
+<!-- 🔹 SERVICES -->
+<section class="py-20 bg-silver dark:bg-[#091726]" id="services" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <span class="uppercase tracking-wide text-aqua font-semibold">Core Services</span>
+    <h2 class="text-3xl md:text-4xl font-sans font-bold mt-3 mb-8 dark:text-aqua">Permanent Solutions. Commercial-Grade Results.</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-[#0f1e33] rounded-2xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-6" data-aos="zoom-in" data-aos-delay="100">
+        <img src="img/fibreglass-pool.jpg" alt="Fibreglass Pool Relining Cape Town" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Fibreglass Refurbishment</h3>
+        <p class="text-darksilver text-sm">High-grade fibreglass systems for waterproof, long-lasting resurfacing – ideal for commercial and residential pools.</p>
       </div>
 
-      <div class="service-cards">
-        <article class="card service-card">
-          <img src="img/fibreglass-pool.jpg" alt="Fibreglass Resurfacing" />
-          <h3>Refibrelining</h3>
-          <p>Professional resurfacing that restores strength and beauty while keeping your pool watertight.</p>
-        </article>
-        <article class="card service-card">
-          <img src="img/cracks-and-leaks.jpg" alt="Leak Repair" />
-          <h3>Crack & Leak Repairs</h3>
-          <p>Pinpoint diagnostics and permanent leak repair to keep your pool running smoothly.</p>
-        </article>
-        <article class="card service-card">
-          <img src="img/laminated-pool.jpg" alt="Laminating" />
-          <h3>Laminating</h3>
-          <p>Premium laminating solutions for a long‑lasting, low‑maintenance finish.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us -->
-  <section class="section light-bg" id="about-preview">
-    <div class="container">
-      <div class="section-intro">
-        <span class="section-eyebrow">About Us</span>
-        <h2>Why Choose A‑j Pools?</h2>
-        <p class="section-lead">Trusted by boutique hotels and homeowners across Cape Town for precision workmanship, fast turnaround times, and premium, lasting finishes.</p>
-        <div class="features-grid">
-          <div class="feature-box fade-in">
-            <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
-            <h4>Fast Turnarounds</h4>
-            <p>Engineered workflows ideal for hospitality timelines.</p>
-          </div>
-          <div class="feature-box fade-in">
-            <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 5 15.4a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 5 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 5.6c.69-.21 1.15-.93 1.15-1.6V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09c0 .67.46 1.39 1.15 1.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.69.21 1.6.93 1.6 1.6V11a2 2 0 0 1-2 2h-.09c-.67 0-1.39.46-1.6 1.15z"/></svg></span>
-            <h4>Premium Materials</h4>
-            <p>High‑grade fibreglass and laminating systems built to last.</p>
-          </div>
-          <div class="feature-box fade-in">
-            <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M9 9h6v6H9z"/></svg></span>
-            <h4>Precision Finish</h4>
-            <p>Clean edges, uniform texture, and a premium polished surface.</p>
-          </div>
-          <div class="feature-box fade-in">
-            <span class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f6feb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
-            <h4>Trusted by Luxury Venues</h4>
-            <p>Chosen by boutique hotels and premium residences in Cape Town.</p>
-          </div>
-        </div>
-
-        <style>
-          .section{padding:48px 0;position:relative}
-          #about-preview{background:#f9fbff;position:relative}
-          .features-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:32px}
-          .feature-box{background:#ffffff;border:1px solid #e6e9ef;border-radius:16px;padding:24px;text-align:center;transition:.25s}
-          .feature-box:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.08)}
-          .feature-icon{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#eaf2ff;margin:0 auto 12px}
-          .feature-box h4{margin:6px 0;font-size:1.1rem;font-weight:600;color:#0f172a}
-          .feature-box p{font-size:.92rem;color:#64748b;margin:0}
-          .fade-in{opacity:0;transform:translateY(20px);animation:fadeUp .7s ease forwards}
-          .fade-in:nth-child(2){animation-delay:.1s}.fade-in:nth-child(3){animation-delay:.2s}.fade-in:nth-child(4){animation-delay:.3s}
-          @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-          @media(max-width:768px){.section{padding:42px 0}.features-grid{gap:16px}.feature-box{padding:18px}.feature-icon{width:46px;height:46px}}
-        </style>
-        <a href="about.html" class="btn spacer-top-md">Learn More About Us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section class="section light-bg" id="homepage-gallery">
-    <div class="container">
-      <span class="section-eyebrow">Our Work</span>
-      <h2>Recent Work</h2>
-      <p>Before‑and‑after snapshots from one of our latest Cape Town transformations.</p>
-
-      <div class="before-after-gallery spacer-top-md">
-        <div class="gallery-pair">
-          <div class="gallery-item before"><img src="img/e1.jpg" alt="Before renovation" /></div>
-          <div class="gallery-item after"><img src="img/e2.jpg" alt="After renovation" /></div>
-        </div>
-        <a href="gallery.html" class="btn spacer-top-md">View Full Gallery</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section light-bg" id="faq-preview">
-    <div class="container faq-preview-grid">
-      <div class="section-intro">
-        <span class="section-eyebrow">FAQ</span>
-        <h2>Frequently Asked Questions</h2>
-        <a href="faq.html" class="btn spacer-top-md">See Full FAQ</a>
+      <div class="bg-white dark:bg-[#0f1e33] rounded-2xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-6" data-aos="zoom-in" data-aos-delay="200">
+        <img src="img/cracks-and-leaks.jpg" alt="Leak and Crack Repair Cape Town" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Leak & Crack Restoration</h3>
+        <p class="text-darksilver text-sm">Permanent repairs that address the root cause of water loss. We fix the structure, not just the surface.</p>
       </div>
 
-      <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">What services do you offer?</button>
-          <div class="faq-answer"><p>Fibreglass resurfacing, refibre lining, leak repair, and full pool restoration.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Do you work with hotels and guesthouses?</button>
-          <div class="faq-answer"><p>Yes — we’ve completed high‑quality projects for Glen Boutique Hotel and other luxury lodges.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">How long does a project take?</button>
-          <div class="faq-answer"><p>Typically 3–5 days depending on pool condition and size.</p></div>
-        </div>
+      <div class="bg-white dark:bg-[#0f1e33] rounded-2xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-6" data-aos="zoom-in" data-aos-delay="300">
+        <img src="img/laminated-pool.jpg" alt="Surface Laminating Fibreglass Cape Town" class="rounded-lg mb-4 h-48 w-full object-cover">
+        <h3 class="font-semibold text-lg mb-2">Surface Laminating</h3>
+        <p class="text-darksilver text-sm">Premium laminating for smooth, low-maintenance finishes that extend your pool’s lifespan.</p>
       </div>
     </div>
-  </section>
+    <a href="service.html" class="inline-block mt-10 bg-navy dark:bg-aqua text-white dark:text-navy px-8 py-3 rounded-full font-semibold hover:scale-105 transition">Explore All Services</a>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section class="section contact light-bg" id="contact-preview">
-    <div class="container contact-showcase">
-      <div class="section-intro">
-        <span class="section-eyebrow">Get in Touch</span>
-        <h2>Contact Us</h2>
-        <p class="section-lead">Let’s talk timelines, budgets, and finishes for your pool restoration.</p>
-        <ul class="contact-highlights">
-          <li>Fast turnarounds for hotels and guesthouses</li>
-          <li>Premium materials for lasting results</li>
-          <li>Hands‑on support from quote to completion</li>
-        </ul>
-        <a href="contact.html" class="btn">Contact A‑j Pools</a>
-      </div>
+<!-- 🔹 FOOTER -->
+<footer class="bg-navy dark:bg-[#050c16] text-silver py-10 text-center">
+  <div class="max-w-6xl mx-auto space-y-4">
+    <p>&copy; 2025 A-J Pools. All rights reserved.</p>
+    <div class="flex justify-center space-x-4">
+      <a href="https://www.instagram.com/aj_pools2014" target="_blank"><img src="img/instagram.png" alt="Instagram" class="w-6 h-6 opacity-80 hover:opacity-100 transition"></a>
+      <a href="https://www.tiktok.com/@aj.pools" target="_blank"><img src="img/tiktok.png" alt="TikTok" class="w-6 h-6 opacity-80 hover:opacity-100 transition"></a>
     </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2025 A-j Pools. All rights reserved.</p>
-    <p>Follow us:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/aj_pools2014?igsh=OWRrNDFoa2VtcjFo" target="_blank"><img src="img/instagram.png" alt="Instagram" /></a>
-      <a href="https://www.tiktok.com/@aj_pools2010?_t=ZM-8y33ubUHftA&_r=1" target="_blank"><img src="img/tiktok.png" alt="TikTok" /></a>
-    </div>
-    <p>Built by <a href="https://dateh.dev" target="_blank">Dateh</a></p>
+    <p class="text-sm">Built by <a href="https://dateh.dev" target="_blank" class="text-aqua hover:underline">Dateh</a></p>
   </div>
 </footer>
 
-<script src="js/app.js"></script>
+<!-- 🔹 JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ duration:900, once:true });
 
+  const menuBtn=document.getElementById('menu-btn');
+  const mobileMenu=document.getElementById('mobile-menu');
+  const themeToggle=document.getElementById('theme-toggle');
+  const root=document.documentElement;
+  const iconSun=document.getElementById('icon-sun');
+  const iconMoon=document.getElementById('icon-moon');
+
+  // Hamburger toggle (visible & animated)
+  menuBtn.addEventListener('click',()=>{
+    if(mobileMenu.classList.contains('hidden')){
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('animate-slide');
+    }else{
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('animate-slide');
+    }
+  });
+
+  // Theme load state
+  if(localStorage.getItem('theme')==='dark'){
+    root.classList.add('dark');
+    iconSun.classList.add('hidden');
+    iconMoon.classList.remove('hidden');
+  }
+
+  // Theme toggle + fade animation
+  themeToggle.addEventListener('click',()=>{
+    document.body.classList.add('fade-enter');
+    setTimeout(()=>document.body.classList.remove('fade-enter'),200);
+    root.classList.toggle('dark');
+    const isDark=root.classList.contains('dark');
+    iconSun.classList.toggle('hidden',isDark);
+    iconMoon.classList.toggle('hidden',!isDark);
+    localStorage.setItem('theme',isDark?'dark':'light');
+  });
+</script>
 </body>
 </html>
-
